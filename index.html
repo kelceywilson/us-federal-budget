@@ -9,19 +9,25 @@ layout: page
 
   <h2><a href="data/">{{ site.data_title }}</a></h2>
   <p>{{ site.data_description }}</p>
-  <ul style="padding-left: 35px; list-style: circle;">
+  <table width="100%" style="margin-left: 25px; margin-right: 25px; margin-bottom: 20px;">
     {% for data in site.data %}
-    <li style="height: 50px; vertical-align: text-middle; line-height: 50px;">
-        <span style="font-size: 22px; font-weight: bold;"><strong>{{ data.title }}</strong></span>
+    <tr>
+      <td>
+        {{ data.title }}
+      </td>
+      <td width="50" align="center">
         <a href="{{ data.csv_url }}">
-          <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-csv.png" width="50" align="right" />
+          <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-csv.png" width="45" />
         </a>
+      </td>
+      <td width="50" align="center">
         <a href="{{ data.json_url }}">
-          <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-json.png" width="50" align="right" />
+          <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-json.png" width="45" />
         </a>
-    </li>
+      </td>
+    </tr>
     {% endfor %}
-  </ul>
+  </table>
   <p>{{ site.data_footer }}</p>
 
 {% endif %}
@@ -30,19 +36,25 @@ layout: page
 
   <h2><a href="api/">{{ site.api_title }}</a></h2>
   <p>{{ site.api_description }}</p>
-  <ul style="padding-left: 35px; list-style: circle;">
+  <table width="100%" style="margin-left: 25px; margin-right: 25px; margin-bottom: 20px;">
     {% for api in site.api %}
-    <li style="height: 50px; vertical-align: text-middle; line-height: 50px;">
-        <span style="font-size: 22px; font-weight: bold;"><strong>{{ api.title }}</strong></span>
+    <tr>
+      <td>
+        {{ api.title }}
+      </td>
+      <td width="50" align="center">
         <a href="{{ api.swagger_url }}" title="Swagger API Definition">
-          <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-swagger-round.png" width="50" align="right" />
+          <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-swagger-round.png" width="45" />
         </a>
+      </td>
+      <td width="50" align="center">
         <a href="/{{ site.github_repo }}/documentation/?swagger_url={{ api.swagger_url }}" title="Interactive Documentation">
-          <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-documentation-interactive.png" width="50" align="right" />
+          <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-documentation-interactive.png" width="45" />
         </a>
-    </ul>
+      </td>
+    </tr>
     {% endfor %}
-  </ul>
+  </table>
   <p>{{ site.api_footer }}</p>
 
 {% endif %}
@@ -84,7 +96,7 @@ layout: page
   <p>{{ site.tools_description }}</p>
   <ul style="padding-left: 35px; list-style: circle;">
     {% for tool in site.tools %}
-    <li><a href="{{ tool.url }}"><strong>{{ tool.title }}</strong></a> ({{ tool.description }}).</li>
+    <li><a href="{{ tool.url }}"><strong>{{ tool.title }}</strong></a> - {{ tool.description }}...<a href="{{ showcase.url }}">view</a>.</li>
     {% endfor %}
   </ul>
   <p>{{ site.tools_footer }}</p>
@@ -97,7 +109,7 @@ layout: page
   <p>{{ site.faq_description }}</p>
   <ul style="padding-left: 35px; list-style: circle;">
     {% for faq in site.faq %}
-    <li><span style="font-weight: bold;">{{ faq.question }}</span> - {{ faq.answer }}</li>
+    <li><strong>{{ faq.question }}</strong> - {{ faq.answer }}</li>
     {% endfor %}
   </ul>
   <p>{{ site.faq_footer }}</p>
