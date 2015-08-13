@@ -20,12 +20,12 @@
             {% endif %}
             {% if site.data_nav == true %}
               <li>
-                <a href="/{{ site.github_repo }}/data/">Data</a>
+                <a href="/{{ site.github_repo }}/data/">Data</a> <span style="font-size: 12px;">(<a href="/{{ site.github_repo }}/data.json">JSON</a>)</span>
               </li>
             {% endif %}
             {% if site.api_nav == true %}
               <li>
-                <a href="/{{ site.github_repo }}/api/">API</a>
+                <a href="/{{ site.github_repo }}/api/">API</a> <span style="font-size: 12px;">(<a href="/{{ site.github_repo }}/apis.json">JSON</a>)</span>
               </li>
             {% endif %}
             {% if site.showcase_nav == true %}
@@ -56,9 +56,9 @@
             <li>
               <a href="/{{ site.github_repo }}/about/">About</a>
             </li>
-            <li style="padding-top: 15px;">
+            <li style="padding-top: 30px;">
               <a href="http://apiware.apievangelist.com/talk" style="font-size: 14px;" target="_blank">(<span style="color: #FF0000;">Need Help?</span> Talk with APIWare)</a>
-            </li>            
+            </li>
             <li style="padding-top: 10px;">
               <a href="http://adopta.agency"><< Return to Adopta.Agency</a>
             </li>
@@ -75,7 +75,7 @@
         <script type="text/javascript">
         function listSponsors()
             {
-            $.getJSON('https://s3.amazonaws.com/kinlane-productions/json/sponsors.json', function(data) {
+            $.getJSON('{{ site.project_url }}data/sponsors.json', function(data) {
                 $.each(data['sponsors'], function(key, val) {
                 var template = $('#parterListingTemplate').html();
                 var html = Mustache.to_html(template, val);
@@ -118,11 +118,8 @@
 	     <div class="footer">
 		    <ul>
 		    	<li><a href="/">Home</a></li>
-		    	<li><a href="/blog/">News</a></li>
-		    	<li><a href="/network">Network</a></li>
 		    	<li><a href="http://kinlane.com/about/">About</a></li>
 		    	<li><a href="http://apisjson.org">APIs.json</a></li>
-		    	<li><a href="/branding-guidelines.html">Branding Guidelines</a></li>
 		    	<li><a href="http://kinlane.com/contact/">Contact</a></li>
 		    </ul>
 		</div>
