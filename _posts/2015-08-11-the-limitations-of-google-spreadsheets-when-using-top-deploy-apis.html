@@ -1,0 +1,15 @@
+---
+layout: post
+title: 'The Limitations of Google Spreadsheets When Using To Deploy APIs'
+image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-google-drive-icon.png
+---
+
+<p>Google Spreadsheet provides a great way to quickly manage datasets, and using cloud services like APISpark, you can then also use to publish APIs. However there are some limitations to this approach you ahve to be aware of going into all of this.</p>
+
+<p>First, there are iitations to the number of columns, and sheets any individual spreadsheet can have, so you will quickly run into this wall, when working with potentially large sets of data.</p>
+
+<p>For this project I was giving 58 spreadsheets, which I grouped into 16 separate spreadsheets. With this approach I found a balance between the number of spreasheets, sheets within each sheet, while keeping a coherent approach to accessing the data--when humans are involved.</p>
+
+<p>It took me several attempts to find the right balance between Google Spreadsheet limitations, and what made sense for managing datastores in CSV, JSON, and as APISpark filestores that I would be using to publish my APIs.</p>
+
+<p>I just wanted to share the fact that their our real limitations of using Google Spreadsheets, which can outweigh the benefits, but I find for 75% of the basic datasets I'm looking to work with--it works just fine!</p>
