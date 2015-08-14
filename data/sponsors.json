@@ -20,9 +20,9 @@
             "title": "Knight Foundation",
             "tagline": "Works to create informed & engaged communities",
             "url": "http://knightfoundation.org/",
-            "logo": "https://s3.amazonaws.com/kinlane-productions/knight-foundation/knight-logo-500-blue.jpg",
-            "width": "75%",
-             "paddingbottom": "1"
+            "logo": "https://s3.amazonaws.com/kinlane-productions/knight-foundation/knight-foundation-vertical.jpg",
+            "width": "100%",
+            "paddingbottom": "1"
         }
 
     ]
