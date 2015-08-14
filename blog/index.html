@@ -4,16 +4,16 @@ title: Blog
 ---
 
 <p><a href="http://design.apievangelist.com/blog.xml"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-rss-icon.png" width="25" align="right" style="padding: 25px;" /></a></p>
-<ul>
+<ul style="padding: 15px;">
 {% for post in paginator.posts %}
 	<li>
 	  {% if post.image != null %}
 	  	<a href="{{ post.url }}" rel="bookmark" title="{{ post.title }}">
-	  		<img src="{{ post.image }}" width="75" />
+	  		<img src="{{ post.image }}" width="75" align="left" />
 	  	</a>
 	  {% endif %}
 	  <a href="{{ post.source }}" rel="bookmark" title="{{ post.title }}" style="color:#000; font-size: 16px;"><strong>{{ post.title }}</strong></a><br />
-	  <i><span class="post-date">{{ post.date | date:"%m-%d-%Y" }}</li><br />
+	  <i><span class="post-date" style="padding: 3px;">{{ post.date | date:"%m-%d-%Y" }}</li><br />
 		{{ post.content | split:'<!--break-->' | first }}
 		{% if post.content contains '<!--break-->' %}
 			 <a href="{{ post.url }}">read more</a>
