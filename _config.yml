@@ -202,7 +202,7 @@ data:
 # APIs
 # ---------
 
-api_show: no
+api_show: yes
 api_nav: yes
 api_title: APIs
 api_description: This is a list of APIs generated from the Excel files made avalable as part of the <a href="https://www.whitehouse.gov/omb/budget/Historicals">Office of Management and Budget Historical Tables</a>, providing data on budget receipts, outlays, surpluses or deficits, Federal debt, and Federal employment over an extended time period, generally from 1940 or earlier to 2016 or 2020.
