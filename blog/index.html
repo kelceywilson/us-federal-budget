@@ -9,11 +9,11 @@ title: Blog
 {% for post in paginator.posts %}
 	<li style="padding: 25px; border-bottom: 0px solid #000;">
 	  {% if post.image != null %}
-	  	<a href="{{ post.url }}" rel="bookmark" title="{{ post.title }}">
+	  	<a href="/{{ site.github_repo }}/{{ post.url }}" rel="bookmark" title="{{ post.title }}">
 	  		<img src="{{ post.image }}" width="65" align="left" />
 	  	</a>
 	  {% endif %}
-		<a href="{{ post.source }}" rel="bookmark" title="{{ post.title }}" style="color:#000; font-size: 16px;"><strong>{{ post.title }}</strong></a> - {{ post.content | split:'<!--break-->' | first | strip_html }}
+		<a href="/{{ site.github_repo }}/{{ post.url }}" rel="bookmark" title="{{ post.title }}" style="color:#000; font-size: 16px;"><strong>{{ post.title }}</strong></a> - {{ post.content | split:'<!--break-->' | first | strip_html }}
 	</li>
 {% endfor %}
 </ul>
