@@ -13,7 +13,7 @@ title: Blog
 	  		<img src="{{ post.image }}" width="65" align="left" />
 	  	</a>
 	  {% endif %}
-		<a href="{{ post.source }}" rel="bookmark" title="{{ post.title }}" style="color:#000; font-size: 16px;"><strong>{{ post.title }}</strong></a> (<i><span class="post-date" style="padding: 3px;">{{ post.date | date:"%m-%d-%Y" }}</i>) - {{ post.content | split:'<!--break-->' | first | strip_html }}
+		<a href="{{ post.source }}" rel="bookmark" title="{{ post.title }}" style="color:#000; font-size: 16px;"><strong>{{ post.title }}</strong></a> - {{ post.content | split:'<!--break-->' | first | strip_html }}
 	</li>
 {% endfor %}
 </ul>
